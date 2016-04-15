@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ngProgress.css">
+    <link rel="stylesheet" href="css/toaster.css">
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-cloak>
+<div class="container" ng-controller="UsersCtrl">
+    <form name="Codenx" novalidate>
+        <table class="table">
+            <tbody>
+            <tr>
+            <th>First Name</th>
+
+                <td><input class="form-control" ng-model="user.firstname" required="" placeholder="First Name"></td>
+
+            </tr>
+            <tr>
+            <th>Last Name</th>
+
+            <td><input class="form-control" ng-model="user.lastname" required="" placeholder="Last Name"></td>
+
+            </tr>
+            <tr>
+                <th>Email address</th>
+
+                <td><input class="form-control" ng-model="user.email" required="" placeholder="Email Address"></td>
+
+            </tr>
+
+
+
+
+            <td><button class="btn btn-primary" ng-click="add(user)" ng-if="!user._id" type="submit" ng-disabled="!Codenx.$valid">Sign Up</button>
+                    <div class="btn-group">
+
+                        <button class="btn" ng-click="deselect()" ng-if="user._id">Clear</button>
+                    </div>
+            </td>
+          </tbody>
+        </table>
+    </form>
+
+</div>
+
+<div data-loading></div>
+<toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-center'}"></toaster-container>
+
+<script src="js/angular.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/ngProgress.min.js"></script>
+<script src="js/toaster.js"></script>
+<script src="app/app.js"></script>
+<script src="app/users.js"></script>
+</body>
+</html>

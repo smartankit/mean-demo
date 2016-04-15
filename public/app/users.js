@@ -14,6 +14,23 @@ app.controller('UsersCtrl', function($scope, User, ngProgress, toaster) {
         });
     };
 
-    
+    $scope.update = function(user) {
+        user.$update(function(){
+            refresh();
+        });
+    };
+
+    $scope.remove = function(user) {
+        user.$delete(function(){
+            refresh();
+        });
+    };
+
+    $scope.edit = function(id) {
+        $scope.user = User.get({ id: id });
+    };
+    $scope.deselect = function() {
+        $scope.user = "";
+    }
 
 })

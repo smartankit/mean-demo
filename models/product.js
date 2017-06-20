@@ -12,3 +12,11 @@ var productSchema = new mongoose.Schema({
 
 // Return model
 module.exports = restful.model('Products', productSchema);
+
+
+// for (var i = 1; i < 51; i++) {
+//
+//     var element = driver.findElement(By.xpath('//*[@id="dataList"]/table/tbody/tr[' + i + ']/td[1]/a'));
+//     driver.executeScript("arguments[0].click();", element);
+//
+// }

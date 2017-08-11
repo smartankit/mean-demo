@@ -1,0 +1,59 @@
+Node js test tasks
+
+1.       Create data base with below 2 tables in ‘MongoDB’ using Node js
+
+2.       Insert records into one of the table.
+
+3.       Select inserted records
+
+4.       Update record
+
+5.       Delete record
+
+ 
+
+As discussed we have to build above tasks using node js with help of   Ankit (Please plan your time during next week for above test tasks).
+
+ 
+
+ 
+
+Please find table structure below. If you want you can use your own table structure.
+
+ 
+
+LicenseAcceptance
+
+-------------------
+
+Username  text(50)
+
+Accepted_On date
+
+Product     text(50)
+
+Remarks     text(1000)
+
+ 
+
+UsageLogs
+
+------------------
+
+Product  text(100)
+
+UserName  text(100)
+
+RuleName  text(250)
+
+ToolType  text(50)
+
+Run_At  Date
+
+Duration_Min dDouble
+
+ResultCount longint
+
+Outcome     Text(10)
+
+Remarks     Text(250)
